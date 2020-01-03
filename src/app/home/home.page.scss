@@ -1,0 +1,93 @@
+ion-item.md ion-item.ios {
+    width:100%;
+    padding: 0px
+}
+
+.card-icon {
+    height: 24px;
+    width: 24px;
+    opacity: 87%;
+    padding-left: 2px;
+}
+
+.small-icon {
+    height:16px;
+    width:16px
+}
+.filter-icon {
+    height: 40px;
+    width: 40px;
+}
+.subtext{
+    font-size: 14px;
+    opacity: 60%;   
+    font-family: "DroidSans"; 
+    padding:0px
+   // line-height: 12.2px;     
+}
+
+.info{
+    font-size: 14px;
+    font-family: "DroidSans"; 
+    margin-left:10px
+   
+}
+p{
+    padding:0px;
+    margin-top: -5px
+}
+
+.subtitle{
+    margin:0 3px 18px;
+    font-size: 18px ;
+    margin: 0 0px 0px;
+    color:#212121;
+    font-family: "DroidSans";
+    font-weight: 100; //line-height: 24.2px;
+    padding:0px
+}
+.no-padding {
+    padding: 0px
+}
+.borders {
+    border-top: 0.5px solid ;
+    border-bottom: 0.5px solid;
+    border-color: gray;
+}
+ion-searchbar {
+    padding: 0
+}
+ion-row ion-col ion-grid {
+    padding: 0px;
+    margin:0px
+}
+
+label {
+    font-family: "DroidSans";
+    font-size: 14px;
+    margin: 0px;
+    padding:0px;
+}
+
+ion-list {
+    padding: 0px
+}
+// .filtermodal .modal-wrapper{
+//     height: 20%;
+//     top: 80%;
+//     position: top; 
+//     display: block; 
+//     background: black 
+//  }
+
+.block-input {
+    background: black;
+    z-index:-1;
+    opacity: .3;
+}
+
+.filter-container {
+    height:auto;
+    max-height: 75%;
+    z-index: 4;
+}

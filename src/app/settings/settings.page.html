@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" ><ion-back-button defaultHref="/tab/home"></ion-back-button></ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none" margin expand="full" (click)="onVibrate()" >
+      <ion-label>Vibrate</ion-label>
+      <ion-icon name="square-outline" size="large" *ngIf="! Vibrate"></ion-icon>
+      <ion-icon name="checkbox-outline" size="large" *ngIf="Vibrate" color="primary"></ion-icon>
+  </ion-item>
+
+
+  <!-- Push Notification -->
+  <ion-item padding-top lines="none" margin expand="full">
+    <strong center>Push Notifications</strong>
+  </ion-item>
+  <ion-item lines="none" margin expand="full" (click)="onPeopleJoiningEvent()" >
+      <ion-label>People Joining Event</ion-label>
+      <ion-icon name="square-outline" size="large" *ngIf="! PeopleJoiningEvent"></ion-icon>
+      <ion-icon name="checkbox-outline" size="large" *ngIf="PeopleJoiningEvent" color="primary"></ion-icon>
+  </ion-item>
+  <ion-item lines="none" margin expand="full" (click)="onPeopleSendingEvent()" >
+      <ion-label>People Sending Event</ion-label>
+      <ion-icon name="square-outline" size="large" *ngIf="! PeopleSendingEvent"></ion-icon>
+      <ion-icon name="checkbox-outline" size="large" *ngIf="PeopleSendingEvent" color="primary"></ion-icon>
+  </ion-item>
+  <ion-item lines="none" margin expand="full" (click)="onEventInvite()" >
+      <ion-label>Event Invite</ion-label>
+      <ion-icon name="square-outline" size="large" *ngIf="! EventInvite"></ion-icon>
+      <ion-icon name="checkbox-outline" size="large" *ngIf="EventInvite" color="primary"></ion-icon>
+  </ion-item>
+  <ion-item lines="none" margin expand="full" (click)="onUpdateOnEvent()" >
+      <ion-label>Update on Events</ion-label>
+      <ion-icon name="square-outline" size="large" *ngIf="! UpdateOnEvent"></ion-icon>
+      <ion-icon name="checkbox-outline" size="large" *ngIf="UpdateOnEvent" color="primary"></ion-icon>
+  </ion-item>
+
+  <!-- In App Notifications -->
+  <ion-item padding-top lines="none" margin expand="full">
+      <strong center>In App Notifications</strong>
+    </ion-item>
+    <ion-item lines="none" margin expand="full" (click)="onPeopleInterest()" >
+        <ion-label>People showing interest in my event</ion-label>
+        <ion-icon name="square-outline" size="large" *ngIf="! PeopleInterest"></ion-icon>
+        <ion-icon name="checkbox-outline" size="large" *ngIf="PeopleInterest" color="primary"></ion-icon>
+    </ion-item>
+    <ion-item lines="none" margin expand="full" (click)="onPeopleComment()" >
+        <ion-label>People commenting on my event</ion-label>
+        <ion-icon name="square-outline" size="large" *ngIf="! PeopleComment"></ion-icon>
+        <ion-icon name="checkbox-outline" size="large" *ngIf="PeopleComment" color="primary"></ion-icon>
+    </ion-item>
+    <ion-item lines="none" margin expand="full" (click)="onFriendJoining()" >
+        <ion-label>My friends joining Volstory</ion-label>
+        <ion-icon name="square-outline" size="large" *ngIf="! FriendJoining"></ion-icon>
+        <ion-icon name="checkbox-outline" size="large" *ngIf="FriendJoining" color="primary"></ion-icon>
+    </ion-item>
+    <ion-item lines="none" margin expand="full" (click)="onSomeoneFollow()" >
+        <ion-label>Someone follows me</ion-label>
+        <ion-icon name="square-outline" size="large" *ngIf="! SomeoneFollow"></ion-icon>
+        <ion-icon name="checkbox-outline" size="large" *ngIf="SomeoneFollow" color="primary"></ion-icon>
+    </ion-item>
+
+</ion-content>
+<ion-footer translucent >
+    <ion-toolbar color="light">
+      <ion-buttons margin justify-content-center>
+       <strong>Apply</strong>
+      </ion-buttons>
+      
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,130 @@
+
+.img {
+    min-height: 200px;
+    max-height: 300px;
+    height:auto;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+ion-grid {
+    padding:0px;
+    margin:0px;
+}
+ion-row {
+    margin:0px;
+    padding:0px
+}
+ion-col {
+    margin:0px;
+    padding:0px
+}
+
+ion-segment-button {
+    padding:0px;
+    margin:0px
+}
+
+.sub-text{
+    font-size: 14px;
+    opacity: 20%;   
+    font-family: "DroidSans"; 
+    color: gray ;
+    padding:0px
+   // line-height: 12.2px;     
+}
+
+.title{
+    margin:0 3px 18px;
+    font-size: 20px ;
+    margin: 0 0px 0px;
+    // opacity: 87%;
+    color:#212121;
+    font-family: "DroidSans";
+    font-weight: 100; //line-height: 24.2px;
+    padding:0px
+}
+
+.text{
+    font-size: 14px;
+    opacity: 20%;   
+    font-family: "DroidSans"; 
+    color: #212121 ;
+    padding:0px
+   // line-height: 12.2px;     
+}
+
+.footer-buttons{
+    height:100% auto;
+}
+.default-icon {
+    height: 20px;
+    width:20px;
+    padding:0px
+}
+
+.facilities {
+    height: 36px;
+    width:36px;
+}
+
+.info-icon {
+    height: 16px;
+    width: 16px;
+}
+
+.divide {
+    margin-left:3%;
+    margin-right:3%;
+    border-bottom: 0.6px solid #b2b2b2;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    opacity: 80%;
+}
+
+ion-chip {
+    height: 80%;
+}
+
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px
+}
+
+.back {
+    font-family: "DroidSans";
+    height: 40px;
+    width: 51%;
+    font-size: 16px;
+    bottom: 0px;
+    font-weight: 500;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: fixed;
+}
+.next {
+    font-family: "DroidSans";
+    height: 40px;
+    width: 51%;
+    font-size: 16px;
+    bottom: 0px;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-left: 49%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: fixed;
+}
+
+.eventd-icon {
+    height: 24px;
+    width: 24px;
+}

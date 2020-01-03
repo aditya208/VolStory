@@ -1,0 +1,70 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+  font-family: "DroidSans";
+  src: url("../assets/DroidSans.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+// .toolbar {
+//   // Your gradient stuff here
+//   background: linear-gradient(to right, #17787d, #00bbb4);
+// }
+// ion-icon {
+//     &[class*="custom-"] {
+//         mask-size: contain;
+//         mask-position: 50% 50%;
+//         mask-repeat: no-repeat;
+//         background: blue;
+//         width: 1em;
+//         height: 1em;
+//     }
+//     &[class*="homefilled"] {
+//         mask-image: url(../assets/imgs/homefilled.svg);
+//     }
+
+// }
+
+
+.default-icon {
+  height: 24px;
+  width: 24px;
+}
+
+
+.text {
+  font-family: "DroidSans";
+  margin-left: 14px;
+}
+
+ion-toolbar {
+  --color: white;
+  // height: 56px;
+  --background: linear-gradient(to right, #17787d , #00bbb4) !important;
+}
