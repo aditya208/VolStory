@@ -1,0 +1,86 @@
+
+
+.detail {
+    margin-left: 10px;
+}
+
+.divide{          
+    border-bottom: 1px solid #b2b2b2  ;
+    //min-height:2px;
+    height: 1px;
+    margin-left: 3.2%;
+    margin-right:3.2% ;
+}
+
+ion-label {
+    font-family: "DroidSans";
+    font-size: 13px;
+}
+
+.text {
+    font-family: "DroidSans";
+    font-size: 13px;
+}
+
+ion-item.md ion-item.ios {
+    width:100%;
+    padding: 0px
+}
+
+.card-icon {
+    height: 24px;
+    width: 24px;
+    opacity: 87%;
+    padding-left: 2px;
+}
+
+.small-icon {
+    height:16px;
+    width:16px
+}
+
+.subtext{
+    font-size: 14px;
+    opacity: 60%;   
+    font-family: "DroidSans"; 
+    padding:0px
+   // line-height: 12.2px;     
+}
+
+.infoe{
+    font-size: 14px;
+    font-family: "DroidSans"; 
+    margin-left:10px
+   
+}
+p{
+    padding:0px;
+    margin-top: -5px
+}
+
+.subtitle{
+    margin:0 3px 18px;
+    font-size: 18px ;
+    margin: 0 0px 0px;
+    color:#212121;
+    font-family: "DroidSans";
+    font-weight: 100; //line-height: 24.2px;
+    padding:0px
+}
+.no-padding {
+    padding: 0px
+}
+.borders {
+    border-top: 0.5px solid ;
+    border-bottom: 0.5px solid;
+    border-color: gray;
+}
+
+
+
+label {
+    font-family: "DroidSans";
+    font-size: 14px;
+    margin: 0px;
+    padding:0px;
+}

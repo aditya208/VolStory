@@ -1,0 +1,244 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../../../assets/imgs/SystemIcons/arrow_back.svg" [routerLink]="['/tab/home']"
+        routerLinkActive="router-link-active" />
+    </ion-buttons>
+    <ion-title class=" title">Host an Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="scroll"> -->
+  <ion-progress-bar value={{progress}} color="secondary" style="height: 6px;margin-top:2px;margin-bottom:2px;">
+  </ion-progress-bar>
+  <!-- First page -->
+
+  <form #f1="ngForm" (ngSubmit)="onSubmit(f1)">
+    <div *ngIf='progress === 0.333' style="padding-bottom: 50px;">
+      <img src="../../assets/imgs/pp.png" style="width:100%;height: 229px;">
+
+      <ion-item>
+        <ion-input placeholder="Event Title" ngModel type="text" name="title" required #titleCheck="ngModel">
+        </ion-input>
+        <ion-icon name="star" color="danger"></ion-icon>
+      </ion-item>
+
+      <ion-item lines="full">
+
+        <ion-label style="margin:0px">Event Category
+          <ion-icon name="star" color="danger"></ion-icon>
+        </ion-label>
+        <img src="../../../assets/imgs/SystemIcons/drop_down.svg" class="form-icon" />
+
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Event Location" ngModel type="text" name="locationAddress" required
+          #locationCheck="ngModel"></ion-input>
+        <ion-icon name="star" color="danger"></ion-icon>
+        <img src="../../../assets/imgs/SystemIcons/drop_down.svg" class="form-icon" />
+      </ion-item>
+
+      <div style="margin-bottom:-5px;margin-top:15px;">
+        <ion-label>Description <ion-icon name="star" color="danger"></ion-icon>
+        </ion-label>
+        <div style="float :right;padding-right: 3%;color:rgb(126, 126, 126)">
+          <small>150-300 characters</small>
+        </div>
+      </div>
+      <ion-textarea class="box" style="height: 100px" required></ion-textarea>
+
+      <div style="margin-bottom:-5px;margin-top:15px;">
+        <ion-label>Tags <ion-icon name="star" color="danger"></ion-icon>
+        </ion-label>
+      </div>
+      <ion-textarea class="box" ngModel type="text" name="description" required #descriptionCheck="ngModel">
+      </ion-textarea>
+      <ion-row>
+        <ion-button class="back" type="button" expand="full">BACK</ion-button>
+        <ion-button type="submit" class="next" (click)="next()" expand="full" [disabled]=!f1.valid>NEXT</ion-button>
+  
+      </ion-row>
+      
+    </div>
+  </form>
+    <!-- Second PAge -->
+    <form #f2="ngForm" (ngSubmit)="onSubmit(f2)">
+    <div *ngIf='progress === 0.666'>
+
+      <div class="item">
+        <ion-label>
+          Event Duration
+        </ion-label>
+      </div>
+
+      <div class="item">
+        <ion-label>
+          From
+        </ion-label>
+      </div>
+      <div class="divide">
+        <ion-datetime displayFormat="DDD, MMM DD, YYYY HH:mm, A" placeholder="Day / Date / Time" ngModel name="from" required #Cfrom="ngModel"></ion-datetime>
+      </div>
+      <div class="item">
+        <ion-label>
+          To
+        </ion-label>
+      </div>
+      <div class="divide">
+        <ion-datetime displayFormat="DDD, MMM DD, YYYY HH:mm, A" placeholder="Day / Date / Time" ngModel name="to" required #Cto="ngModel">
+        </ion-datetime>
+      </div>
+      <div class="item">
+        <ion-label>
+          Last Date Of Joining
+        </ion-label>
+      </div>
+      <div class="divide">
+        <ion-datetime displayFormat="DDD, MMM DD, YYYY HH:mm, A" placeholder="Day / Date" ngModel required name="lastdate" #CLD="ngModel">
+        </ion-datetime>
+      </div>
+
+      <div class="item">
+        <ion-label>
+          Required Volunteers
+        </ion-label>
+      </div>
+
+      <ion-grid>
+        <ion-row class="vol" style="text-align: center">
+          <ion-col size="6" size-md="3">
+            <ion-item lines="none">
+              Min <input type="number" class="box ion-text-center" value=min ngModel name="min" #minCtrl="ngModel"
+                style="width: 30%;margin-left:5%" required  #Cmin="ngModel">
+              <div class="box" style="width: 20px;margin-right: 30px;height: 30px;">
+                <!-- <ion-icon name="arrow-up" mode="ios"></ion-icon>
+                <ion-icon name="arrow-down" mode="ios"></ion-icon> -->
+                <img src="../../../assets/imgs/SystemIcons/arrow updown (calender date chnager).svg" class="form-icon" style="margin-top:6px;" /> 
+              </div>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6" size-md="3">
+            <ion-item lines="none">
+              Max <input type="number" class="box ion-text-center" ngModel name="max"
+                [min]=minCtrl.value+1 style="width: 30%;margin-left:5%" required  #Cmax="ngModel">
+              <div class="box" style="width: 20px;margin-right: 30px;height: 30px;">
+                <!-- <ion-icon name="arrow-up" mode="ios"></ion-icon>
+                <ion-icon name="arrow-down" mode="ios"></ion-icon> -->
+                <img src="../../../assets/imgs/SystemIcons/arrow updown (calender date chnager).svg" class="form-icon" style="margin-top:6px;" />
+              </div>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="item">
+        <ion-label>
+          Required Skills
+        </ion-label>
+        <ion-item>
+          <ion-input></ion-input>
+        </ion-item>
+        <div class="divide"></div>
+
+      </div>
+      <div style="padding-bottom: 50px;">
+        <ion-chip color="dark" outline="true">Leadership</ion-chip>
+        <ion-chip color="dark" outline="true">Management</ion-chip>
+        <ion-chip color="dark" outline="true">Cooking</ion-chip>
+        <ion-chip color="dark" outline="true">Manage Accounts</ion-chip>
+        <ion-chip color="dark" outline="true">Gardening</ion-chip>
+
+      </div>
+
+      <ion-row>
+        <ion-button class="back" type="button" expand="full">BACK</ion-button>
+        <ion-button type="submit" class="next" (click)="next()" expand="full" [disabled]=!f2.valid>NEXT</ion-button>
+      </ion-row>
+ 
+    </div>
+  </form>
+
+
+
+    <!-- Third page -->
+    <form #f3="ngForm" (ngSubmit)=onSubmit(f3)>
+    <div *ngIf='progress > 1'>
+      <div style="padding-top: 15px">
+        <ion-label style="margin-top: 15px"><b>Facilities</b></ion-label>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="4">
+              <img src="../../../assets/imgs/SystemIcons/checkbox.svg" *ngIf=!snack class="form-icon" (click)=changeSnack() />
+              <img src="../../../assets/imgs/SystemIcons/selected checkbox.svg" *ngIf=snack class="form-icon" (click)=changeSnack() />
+              <ion-label>Snacks</ion-label>
+          </ion-col>
+          <ion-col size-md="4">
+              <img src="../../../assets/imgs/SystemIcons/checkbox.svg" *ngIf=!certificate class="form-icon" (click)=changeC() />
+            <img src="../../../assets/imgs/SystemIcons/selected checkbox.svg" *ngIf=certificate class="form-icon" (click)=changeC() />
+            <ion-label>Certificate</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-md="4">
+              <img src="../../../assets/imgs/SystemIcons/checkbox.svg" *ngIf=!meal class="form-icon" (click)=changeMeal() />
+            <img src="../../../assets/imgs/SystemIcons/selected checkbox.svg" *ngIf=meal class="form-icon" (click)=changeMeal() />
+            <ion-label>Meals</ion-label>
+          </ion-col>
+          <ion-col size-md="4">
+              <img src="../../../assets/imgs/SystemIcons/checkbox.svg" *ngIf=!money class="form-icon" (click)=changeMoney() />
+              <img src="../../../assets/imgs/SystemIcons/selected checkbox.svg" *ngIf=money class="form-icon" (click)=changeMoney() />
+              <ion-label>Money</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div style="padding-top: 15px">
+        <ion-label><b>Visibility</b></ion-label>
+      </div>
+      <div class="item">
+        <ion-radio-group name="visibility" required ngModel #Cvisibility="ngModel">
+          <ion-row>
+
+            <ion-label style="padding-top: 10px;">
+              <ion-radio value="public"></ion-radio>
+              <span style="margin-left: 10px"></span>Public
+            </ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label style="padding-top: 10px">
+              <ion-radio value="followers"></ion-radio>
+              <span style="margin-left: 10px"></span>Followers
+            </ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label style="padding-top: 10px">
+              <ion-radio value="invite"></ion-radio>
+              <span style="margin-left: 10px"></span>By Invite
+            </ion-label>
+          </ion-row>
+        </ion-radio-group>
+      </div>
+
+      <div class="add-media">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <img src="../../../assets/imgs/SystemIcons/add photo album.svg" class="small-icon" />
+              <ion-label>Add Photo</ion-label>
+            </ion-col>
+            <ion-col>
+              <img src="../../../assets/imgs/SystemIcons/add video album.svg" class="small-icon" />
+              <ion-label>Add Video</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <ion-row>
+        <ion-button class="back" type="button" expand="full">BACK</ion-button>
+        <ion-button type="submit" class="next" (click)="next()" expand="full" [disabled]=!f3.valid>NEXT</ion-button>
+  
+      </ion-row>
+    </div>
+  </form>
+</ion-content>

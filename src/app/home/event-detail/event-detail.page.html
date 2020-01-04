@@ -1,0 +1,263 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-buttons padding-end>
+        <img src="../../../assets/imgs/SystemIcons/arrow_back.svg" class="default-icon" [routerLink]="['/tab/home']" routerLinkActive="router-link-active" 
+          margin-start />
+      </ion-buttons>
+    </ion-buttons>
+    {{ event.name}}
+    <ion-buttons slot="end">
+      <img src="../../../assets/imgs/SystemIcons/share.svg" class="default-icon" />
+      <ion-button (click)=present($event) >
+        <img src="../../../assets/imgs/SystemIcons/more(3 dots).svg" class="default-icon" margin-start
+          />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="background-color: black" class="img ion-text-end">
+    <div style="padding-top: 150px;margin-right: 10px">
+      <circle-progress [percent]="20" [title]="['3/15','Joined']"></circle-progress>
+      <div class="sub-text ion-text-center" style="float:right;color:white;margin-top:18px;">
+        <ion-text class="title" style="color:white;font-size:16px"><b>27</b></ion-text>
+        <small><br>Interested</small>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Main Content about the event -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <ion-text class="title" style="color:gray;opacity: 20%;">
+          Jul<br>03
+        </ion-text>
+      </ion-col>
+
+      <ion-col size="10">
+        <ion-text class="title">
+          <b>{{event.name}}<br></b>
+          <span class="text" style="margin: 0px;padding:0px;">{{event.category}} <ion-icon [name]="event.scope"
+              margin-start></ion-icon></span>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <div class="divide"></div>
+
+    <ion-row [routerLink]="['/tab/profile']" routerLinkActive="router-link-active">
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/SystemIcons/person (user).svg" class="info-icon" />
+      </ion-col>
+
+      <ion-col size="10">
+        <ion-text class="text">
+          {{event.head}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/SystemIcons/calendar.svg" class="info-icon" />
+      </ion-col>
+
+      <ion-col size="10">
+        <ion-text class="text">
+          {{event.date}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/SystemIcons/time(clock).svg" class="info-icon" />
+      </ion-col>
+
+      <ion-col size="10">
+        <ion-text class="text">
+          10:15am - 12:15pm
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/SystemIcons/location.svg" class="info-icon" />
+      </ion-col>
+
+      <ion-col size="10">
+        <ion-text class="text">
+          {{event.location}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <div class="divide"></div>
+    <div class="no-padding">
+      <ion-grid class="no-padding">
+        <ion-row margin-end margin-start>
+          <ion-col size="4" class="ion-text-center">
+            <img src="../../assets/imgs/SystemIcons/share.svg" class="eventd-icon" />
+            <div class="text " style="margin-top:0px;width:100%;margin-left:0px;font-size: 14px;opacity:60%">
+              Share
+            </div>
+          </ion-col>
+          <ion-col size="4" class="ion-text-center">
+            <img src="../../assets/imgs/SystemIcons/star border.svg" class="eventd-icon" *ngIf='!star'
+              (click)=starEvent() />
+            <img src="../../assets/imgs/SystemIcons/star filled.svg" class="eventd-icon" *ngIf=star
+              (click)=starEvent() />
+            <div class="text " style="margin-top:0px;width:100%;margin-left:0px;font-size: 14px;opacity:60%">
+              Interested
+            </div>
+          </ion-col>
+          <ion-col size="4" class="ion-text-center">
+            <img src="../../assets/imgs/SystemIcons/join event 2.svg" class="eventd-icon" />
+            <div class="text " style="margin-top:0px;width:100%;margin-left:0px;font-size: 14px;opacity:60%">
+              Join
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="divide"></div>
+
+
+
+    <ion-row>
+      <ion-text class="text" style="font-size: 13px;margin-left:3%"><b>Facilities</b></ion-text>
+    </ion-row>
+    <div style="margin-left:4%;width:100%;height: 52px;">
+      <div style="width: 60px;float:left" class=" ion-text-center">
+        <img src="../../../assets/imgs/SystemIcons/Stipend.svg" class="facilities" />
+        <div class="text ion-text-center"
+          style="margin-top:-5px;width:100%;margin-left:-2px;font-size: 12px;opacity:60%">
+          Stipend
+        </div>
+      </div>
+      <div style="width: 60px;float:left" class=" ion-text-center">
+        <img src="../../../assets/imgs/SystemIcons/snacks (cup).svg" class="facilities" />
+        <div class="text ion-text-center"
+          style="margin-top:-5px;width:100%;margin-left:-2px;font-size: 12px;opacity:60%">
+          Snacks
+        </div>
+      </div>
+    </div>
+
+    <div class="divide"></div>
+    <div (click)="onDropDown()">
+      <ion-text class="text" style="margin-left:3%;font-size:14px;"><b>Required Skills</b></ion-text>
+      <img src="../../../assets/imgs/SystemIcons/drop_down.svg" class="default-icon"
+        style="float: right; margin-right: 3%" />
+    </div>
+    <ion-item *ngIf="showSkill" lines="none">
+      <div>
+        <ion-text *ngFor="let skill of event.skills">
+          <ion-chip color="dark" outline="true">{{skill}}</ion-chip>
+        </ion-text>
+      </div>
+
+    </ion-item>
+    <div class="divide" style="margin-top:5px;"></div>
+
+    <ion-segment (ionChange)="onFilterUpdate($event)" mode="md" color="dark">
+      <ion-segment-button value="details" checked>
+        Details
+      </ion-segment-button>
+      <ion-segment-button value="media">
+        Photos & Videos
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-row>
+      <ion-text class="text" style="font-size: 13px;margin-left:3%;margin-top: 5px; "><b>Description</b></ion-text>
+      <ion-text class="text" style="font-size: 13px;margin-left:3%;margin-top: 5px;margin-right:1%">
+        {{event.description}}</ion-text>
+      <ion-text class="text"
+        style="font-size: 13px;margin-left:3%;margin-top: 15px;margin-right:1%;margin-bottom:15px;"><b>#money #save
+          <br>the trees #moneymoney</b></ion-text>
+    </ion-row>
+    <div class="divide"></div>
+
+
+    <!-- Comments -->
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/category- senior citizen.svg" class="profile-img " />
+      </ion-col>
+      <ion-col size="10" margin-start>
+        <div class="text">
+          <b>Person name</b>
+          <br>
+          Awesome!! wish to work with you again
+          <span class="sub-text" style="font-size: 8px"><br>36 min</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- harcode -->
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/category- senior citizen.svg" class="profile-img " />
+      </ion-col>
+      <ion-col size="10" margin-start>
+        <div class="text">
+          <b>Person name</b>
+          <br>
+          Awesome!! wish to work with you again
+          <span class="sub-text" style="font-size: 8px"><br>36 min</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/category- senior citizen.svg" class="profile-img " />
+      </ion-col>
+      <ion-col size="10" margin-start>
+        <div class="text">
+          <b>Person name</b>
+          <br>
+          Awesome!! wish to work with you again
+          <span class="sub-text" style="font-size: 8px"><br>36 min</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <img src="../../../assets/imgs/category- senior citizen.svg" class="profile-img " />
+      </ion-col>
+      <ion-col size="10" margin-start>
+        <div class="text">
+          <b>Person name</b>
+          <br>
+          Awesome!! wish to work with you again
+          <span class="sub-text" style="font-size: 8px"><br>36 min</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Adding comments -->
+  <div style="margin-bottom:40px;border: 0.5px solid #b2b2b2;border-radius: 5px; ">
+    <ion-row>
+      <ion-col size="10">
+        <ion-input placeholder="Add a Comment" type="text" class="text"></ion-input>
+      </ion-col>
+      <ion-col size="2" style="margin-bottom: 5px">
+        <img src="../../../assets/imgs/SystemIcons/send.svg" class="default-icon" style="float: right;margin-top:5px" />
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <!-- Buttons -->
+
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-button class="back" type="button" expand="full">JOIN</ion-button>
+    <ion-button type="submit" class="next" expand="full">INTERESTED</ion-button>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "appId": "com.iskcon.volstory",
+  "appName": "VolStory",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

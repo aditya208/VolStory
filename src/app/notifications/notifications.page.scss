@@ -1,0 +1,31 @@
+default-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.image {
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    z-index: 1;
+}
+
+ion-text {
+    font-family: "DroidSans";
+    font-size: 13px;
+    
+}
+
+.time {
+    font-family: "DroidSans";
+    font-size: 10px;
+    color:rgb(153, 153, 153);
+}
+
+.sub-icon {
+    height: 25px;
+    width: 25px;
+    margin-top: -34px;
+    margin-left: 40px;
+    z-index: 3;
+}

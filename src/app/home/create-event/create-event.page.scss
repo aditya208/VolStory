@@ -1,0 +1,101 @@
+.box {
+    width:90%;
+    border: 1px solid #DDDDDD;
+    font-size: 14px;
+    font-family: "DroidSans";
+    min-height: 30px;
+}
+ion-label.md{
+    margin: 12px 0px 0px 15px;
+    color:#212121;
+    font-family: "DroidSans";
+    font-size: 14px;
+}
+// .item {
+//     width:100%;
+//     height: auto;  
+    // max-height: 40px; 
+// }
+ion-label.ios{
+    color:black;
+    font-family: "DroidSans";
+    font-size: 14px;
+}
+ion-item {
+    padding: 0px 0px 0px 0px;
+    min-height: 20px;
+    font-size: 14px;
+    margin:0px 0px 0px 0px;
+}
+.back {
+    border-radius: 0px;
+    //overflow: hidden;
+    font-family: "DroidSans";
+    height: 40px;
+    width: 51%;
+    font-size: 16px;
+    bottom: 0px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: -5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: fixed;
+    z-index: 5;
+
+}
+.next {
+    border-radius: 0px;
+    //overflow: hidden;
+  //  outline-color: #212121;
+    z-index: 5;
+    font-family: "DroidSans";
+    height: 40px;
+    width: 50%;
+    font-size: 16px;
+    bottom: 0px;
+    font-weight: 500;
+    margin-left: 5px;
+    text-transform: uppercase;
+    margin-left: 49%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: fixed;
+}
+.small-icon {
+    height: 15px;
+    width: 15px;
+}
+ion-radio.md {
+    height: 15px;
+    width:15px;
+
+}
+
+ion-chip.md {
+    height: 80%;
+}
+
+.add-media {
+    border-top: 1px solid #212121;border-bottom: 1px solid #212121;margin-top: 15px; padding: 2px;text-align: center;
+    padding-bottom: 5px;
+}
+
+.form-icon {
+    height: 16px;
+    width: 16px;
+}
+
+.divide {
+    border-bottom: 1px solid #D8D8D8;
+    padding: 0px;
+    width: 100%; 
+    font-family: "DroidSans";
+    font-size: 14px;
+}

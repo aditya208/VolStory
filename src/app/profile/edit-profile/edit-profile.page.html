@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="../../../assets/imgs/SystemIcons/arrow_back.svg" class="default-icon" [routerLink]="['/tab/home']" routerLinkActive="router-link-active" />
+    </ion-buttons>
+    <ion-title>edit-profile</ion-title>
+    <ion-buttons slot="end" >
+      <ion-text class="text" [routerLink]="['/tab/profile']" routerLinkActive="router-link-active" >
+        Back
+      </ion-text>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <img src="../../../assets/imgs/pro-pic.png" class="pro-pic" />
+      </ion-col>
+      <ion-col size="3" offset="1" style="border-right: 0.5px solid #b2b2b2;height: 80px;margin:20px 0 10px 0">
+
+        <div class="ion-text-center" style="margin:20px 20px 10px 0">
+          <ion-text class="textt">108<br>Following</ion-text>
+        </div>
+      </ion-col>
+      <ion-col size="3" style="height: 60px;margin:10px 0 10px 0">
+
+        <div class="ion-text-center" style="margin:30px 0 10px 20px">
+          <ion-text class="textt">145<br>Followers</ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-item lines="full">
+    <img src="../../../assets/imgs/SystemIcons/person (user).svg" class="default-icon">
+    <ion-input placeholder="Name"></ion-input>
+  </ion-item>
+  <ion-row>
+    <ion-col>
+      <ion-item lines="full">
+        <img src="../../../assets/imgs/SystemIcons/Birthday cake.svg" class="default-icon">
+        <ion-input placeholder="Age"></ion-input>
+      </ion-item>
+
+    </ion-col>
+    <ion-col>
+      <ion-item lines="full">
+        <img src="../../../assets/imgs/SystemIcons/gender.svg" style="float:left;">
+        <ion-select placeholder="Gender" interface="popover">
+          <ion-select-option value="male">Male</ion-select-option>
+          <ion-select-option value="female">Female</ion-select-option>
+          <ion-select-option value="other">Other</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-item lines="full">
+    <img src="../../../assets/imgs/SystemIcons/location.svg" class="default-icon">
+    <ion-input placeholder="City"></ion-input>
+  </ion-item>
+  <ion-item>
+    <img src="../../../assets/imgs/SystemIcons/call.svg" class="default-icon">
+    <ion-input placeholder="Mobile Number"></ion-input>
+    <img src="../../assets/imgs/SystemIcons/toggle off.svg" *ngIf=!mob />
+    <img src="../../assets/imgs/SystemIcons/toggle on.svg" *ngIf=mob />
+  </ion-item>
+  <ion-item lines="full">
+    <img src="../../../assets/imgs/SystemIcons/mail.svg" class="default-icon">
+    <ion-input placeholder="E-mail"></ion-input>
+    <img src="../../assets/imgs/SystemIcons/toggle off.svg" *ngIf=!mail />
+    <img src="../../assets/imgs/SystemIcons/toggle on.svg" *ngIf=mail />
+  </ion-item>
+  <ion-item lines="full">
+    <img src="../../../assets/imgs/SystemIcons/website.svg" class="default-icon">
+    <ion-input placeholder="Website"></ion-input>
+    <img src="../../assets/imgs/SystemIcons/toggle off.svg" *ngIf=!website />
+    <img src="../../assets/imgs/SystemIcons/toggle on.svg" *ngIf=website />
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label class="textt">Skills</ion-label>
+    <img src="../../../assets/imgs/SystemIcons/Edit.svg" />
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label class="textt">Interests</ion-label>
+    <img src="../../../assets/imgs/SystemIcons/Edit.svg" />
+  </ion-item>
+  <!-- </ion-row> -->
+</ion-content>
