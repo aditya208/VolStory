@@ -1,0 +1,23 @@
+<ion-content>
+  <div>
+    <!--<img src="assets/imgs/003 ALL FINAL VISUALS/visuals-welcome.svg" style=" width:400px; height:400px; margin-top:10px;"/>-->
+    <ion-button class="fb" (click)="Loginwithfb()">
+      <div>
+        
+        <ion-icon name="logo-facebook" class="icon"></ion-icon>
+      </div>
+      <label>Sign Up with Facebook</label>
+    </ion-button>
+    <ion-button class="google" (click) = "loginWithGoogle()" >
+      <div>
+        <ion-icon name="logo-google" class="icon"></ion-icon>
+      </div>
+      
+      <label>Sign Up with Google</label>
+     </ion-button> 
+    
+  </div>
+  <div>
+    <ion-button id="skip" expand="full" (click)="skip()">skip</ion-button>
+  </div>
+</ion-content>

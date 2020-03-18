@@ -69,7 +69,19 @@ export class HomePage {
   starEvent() {
     this.star = ! this.star;
   }
+  loadData(event) {
+    setTimeout(() => {
+      console.log('Done');
+      this.addMoreItems();
+      event.target.complete();
+    }, 800);
   }
-
+ /* addMoreItems() {
+    this.eventService.getAllEvents();
+  }*/
+  addMoreItems() {
+    this.eventService.getAllEvents();
+  }
+}
 
 

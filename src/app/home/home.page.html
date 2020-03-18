@@ -9,21 +9,22 @@
       <!--<img src="../../assets/imgs/SystemIcons/search.svg" class="card-icon" (click)="setSearch()" />-->
       <ion-icon name="search" class="card-icon" (click)="setSearch()" ></ion-icon>
       <!-- Filter icon-->
-      <img src="../../assets/imgs/SystemIcons/filter.svg" class="card-icon" margin-start margin-end
-        (click)="filterEvents()"  />
+     <!-- <img src="../../assets/imgs/SystemIcons/filter.svg" class="card-icon" margin-start margin-end
+        (click)="filterEvents()"  />-->
+      <ion-icon name="options" class="card-icon" margin-start margin-end (click)="filterEvents()" ></ion-icon>
     </ion-buttons>
   </ion-toolbar>
-
+  
   <!-- Searchbar when search is active -->
   <ion-item *ngIf='find'>
     <img src="../../assets/imgs/SystemIcons/arrow_back.svg" class="card-icon" (click)="setSearch()" />
-    <ion-input placeholder="Search" margin-start class="text"></ion-input>
+    <ion-input placeholder="Search" margin-start class="card-icon"></ion-input>
   </ion-item>
 
   <!-- Toolbar when filter is active -->
   <ion-toolbar *ngIf="filter">
     <ion-buttons slot="start">
-        <img src="../../assets/imgs/SystemIcons/arrow_back.svg" styel="height: 12px;width:12px;" (click)=filterEvents() margin-start/>
+        <img src="../../assets/imgs/SystemIcons/arrow_back.svg" class="card-icon" (click)=filterEvents() margin-start/>
     </ion-buttons>
     <ion-title>Filter</ion-title>
   </ion-toolbar>
@@ -89,7 +90,7 @@
     </ion-item>
     <ion-item>
       <ion-label></ion-label>
-      <ion-select [(ngModel)]="Category">
+      <ion-select [(ngModel)]= "Category">
         <ion-select-option value="nes">Child Education</ion-select-option>
         <ion-select-option value="n64">Environment </ion-select-option>
         <ion-select-option value="ps">Animal care</ion-select-option>
@@ -193,7 +194,7 @@
   <ion-button expand="full">DONE</ion-button>
 </div>
 
-<!-- **************************************************Main Content**************************************************************** -->
+<!-- **************************************************Main Content**************************************************************** -->              
 <ion-content [scrollY]=!filter mode="md">
 
   <div style="padding-top:5px;padding-left:5px ;" [ngClass]="cssClass">
@@ -267,5 +268,10 @@
       <img src="../../assets/imgs/SystemIcons/plus for floating button.svg" style="width: 40px;height: 40px;"  [routerLink]="['/createEvent']" routerLinkActive="router-link-active"  />
     </ion-fab-button>
   </ion-fab>
-
+  <ion-infinite-scroll threshold="10px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

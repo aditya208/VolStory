@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tab', pathMatch: 'full' },
+  { path: '', redirectTo: 'authentication', pathMatch: 'full' },
   { path: 'tab', loadChildren: './tab/tab.module#TabPageModule' },
   // { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   // { path: 'mystory', loadChildren: './mystory/mystory.module#MystoryPageModule' },
@@ -13,7 +13,11 @@ const routes: Routes = [
   { path: 'createEvent', loadChildren: './home/create-event/create-event.module#CreateEventPageModule' },
   { path: 'list', loadChildren: './list/list.module#ListPageModule' },
   // it must be set as child to edit in porfile page
-  { path: 'edit', loadChildren: './profile/edit-profile/edit-profile.module#EditProfilePageModule' }
+  { path: 'edit', loadChildren: './profile/edit-profile/edit-profile.module#EditProfilePageModule' },
+  {
+    path: 'authentication',
+    loadChildren: () => import('./authentication/authentication.module').then( m => m.AuthenticationPageModule)
+  }
 ];
 
 @NgModule({
